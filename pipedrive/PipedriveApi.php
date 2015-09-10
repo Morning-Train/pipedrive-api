@@ -58,6 +58,39 @@ class PipedriveApi{
 	public function getDealProducts($id, $query = []){
 		return $this->GET('deals/'.$id.'/products', $query);
 	}
+
+	public function getDealActivities($id, $query = []){
+		return $this->GET('deals/'.$id.'/activities', $query);
+	}
+
+	public function getDealUpdates($id, $query = []){
+		return $this->GET('deals/'.$id.'/updates', $query);
+	}
+
+	public function getDealParticipants($id, $query = []){
+		return $this->GET('deals/'.$id.'/participants', $query);
+	}
+
+	public function getDealFiles($id, $query = []){
+		return $this->GET('deals/'.$id.'/files', $query);
+	}
+
+	public function getDealPermittedUsers($id, $accessLevel){
+		$query['access_level'] = $accessLevel;
+		return $this->GET('deals/'.$id.'/files', $query);
+	}
+
+	public function getDealEmailMessages($id, $query = []){
+		return $this->GET('deals/'.$id.'/emailMessages', $query);
+	}
+
+	public function getDealsByName($query = []){
+		return $this->GET('deals/find', $query);
+	}
+
+	public function getDealsTimeline($query = []){
+		return $this->GET('deals/timeline', $query);
+	}
 }
 
 ?>
