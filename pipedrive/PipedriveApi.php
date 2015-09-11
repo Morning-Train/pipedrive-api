@@ -41,7 +41,7 @@ class PipedriveApi{
 		return false;
 	}
 
-	//Deals Endpoints:
+	/* DEALS */
 
 	public function getDeals($query = []){
 		return $this->GET('deals', $query);
@@ -77,7 +77,7 @@ class PipedriveApi{
 
 	public function getDealPermittedUsers($id, $accessLevel){
 		$query['access_level'] = $accessLevel;
-		return $this->GET('deals/'.$id.'/files', $query);
+		return $this->GET('deals/'.$id.'/permittedUsers', $query);
 	}
 
 	public function getDealEmailMessages($id, $query = []){
@@ -91,6 +91,54 @@ class PipedriveApi{
 	public function getDealsTimeline($query = []){
 		return $this->GET('deals/timeline', $query);
 	}
+
+	/* ORGANIZATIONS */
+
+	public function getOrganizations($query = []){
+		return $this->GET('organizations', $query);
+	}
+
+	public function getOrganizationById($id){
+		return $this->GET('organizations/'.$id);
+	}
+
+	public function getOrganizationFiles($id, $query = []){
+		return $this->GET('organizations/'.$id.'/files', $query);
+	}
+
+	public function getOrganizationEmailMessages($id, $query = []){
+		return $this->GET('organizations/'.$id.'/emailMessages', $query);
+	}
+
+	public function getOrganizationFollowers($id){
+		return $this->GET('organizations/'.$id.'/followers');
+	}
+
+	public function getOrganizationPersons($id, $query = []){
+		return $this->GET('organizations/'.$id.'/persons', $query);
+	}
+
+	public function getOrganizationDeals($id, $query = []){
+		return $this->GET('organizations/'.$id.'/deals', $query);
+	}
+
+	public function getOrganizationActivities($id, $query = []){
+		return $this->GET('organizations/'.$id.'/activities', $query);
+	}
+
+	public function getOrganizationUpdates($id, $query = []){
+		return $this->GET('organizations/'.$id.'/updates', $query);
+	}
+
+	public function getOrganizationPermittedUsers($id, $accessLevel){
+		$query['access_level'] = $accessLevel;
+		return $this->GET('organizations/'.$id.'/permittedUsers', $query);
+	}
+
+	public function getOrganizationsByName($query = []){
+		return $this->GET('organizations/find', $query);
+	}
+
 }
 
 ?>
