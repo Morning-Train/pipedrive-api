@@ -66,17 +66,74 @@ echo '<pre>';
 // 	'org_id' => '12'
 // 	]);
 
-$result = $pipedrive_client->getDealsTimeline([ 
-	'start_date' => '2015-05-13',
-	'interval' => 'day',
-	'amount' => '12',
-	'field_key' => 'add_time',
-	'user_id' => null,
-	'pipeline_id' => null,
-	'filter_id' => null,
-	'exclude_deals' => null,
-	'totals_convert_currency' => null
+// $result = $pipedrive_client->getDealsTimeline([ 
+// 	'start_date' => '2015-05-13',
+// 	'interval' => 'day',
+// 	'amount' => '12',
+// 	'field_key' => 'add_time',
+// 	'user_id' => null,
+// 	'pipeline_id' => null,
+// 	'filter_id' => null,
+// 	'exclude_deals' => null,
+// 	'totals_convert_currency' => null
+// 	]);
+
+// $result = $pipedrive_client->getOrganizations([ 
+// 	'filter_id' => null,
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'sort' => null
+// 	]);
+
+// $result = $pipedrive_client->getOrganizationById(1);
+
+$result = $pipedrive_client->getOrganizationFiles(1, [ 
+	'start' => '1',
+	'limit' => '10',
+	'include_deleted_files' => '0',
+	'sort' => null
 	]);
+
+$result = $pipedrive_client->getOrganizationEmailMessages(1, [ 
+	'start' => '1',
+	'limit' => '10'
+	]);
+
+$result = $pipedrive_client->getOrganizationFollowers(1);
+
+$result = $pipedrive_client->getOrganizationPersons(1, [ 
+	'start' => '1',
+	'limit' => '10'
+	]);
+
+$result = $pipedrive_client->getOrganizationDeals(1, [ 
+	'start' => '1',
+	'limit' => '10',
+	'status' => 'all_not_deleted',
+	'sort' => null,
+	'only_primary_association' => null
+	]);
+
+$result = $pipedrive_client->getOrganizationActivities(1, [ 
+	'start' => '1',
+	'limit' => '10',
+	'done' => null,
+	'exclude' => null
+	]);
+
+$result = $pipedrive_client->getOrganizationUpdates(1, [ 
+	'start' => '1',
+	'limit' => '10'
+	]);
+
+$result = $pipedrive_client->getOrganizationPermittedUsers(1, 3);
+
+$result = $pipedrive_client->getOrganizationsByName(1, [
+	'term' => 'mohamed',
+	'start' => '1',
+	'limit' => '10'
+	]);
+
 
 if(isset($result)){
 	var_dump($result);
