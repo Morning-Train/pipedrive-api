@@ -202,6 +202,36 @@ echo '<pre>';
 // 	'search_by_email' => null
 // 	]);
 
+/* PIPELINES */
+
+// $result = getAllPipelines();
+
+// $result = getPipelineById(1);
+
+// $result = $pipedrive_client->getPipelineDeals(1, [
+// 	'filter_id' => null,
+// 	'user_id' => null,
+// 	'everyone' => null,
+// 	'stage_id' => null,
+// 	'start' => '1',
+// 	'limit' => '10',
+// 	'get_summary' => null,
+// 	'total_convert_currency' => null
+// 	]);
+
+// $result = $pipedrive_client->getPipelineConversionRatesStats(1, [
+// 	'start_date' => '2015-05-12',
+// 	'end_date' => '2015-09-12',
+// 	'user_id' => null
+// 	]);
+
+// $result = $pipedrive_client->getPipelineMovementsStats(1, [
+// 	'start_date' => '2015-05-12',
+// 	'end_date' => '2015-09-12',
+// 	'user_id' => null
+// 	]);
+
+
 
 if(isset($result)){
 	var_dump($result);
