@@ -262,6 +262,12 @@ echo '<pre>';
 // 	'limit' => '10'
 // 	]);
 
+/* PUSH NOTIFICATIONS */
+
+// $result = $pipedrive_client->getAllPushNotifications();
+
+// $result = $pipedrive_client->getPushNotificationById(1);
+
 if(isset($result)){
 	var_dump($result);
 }
