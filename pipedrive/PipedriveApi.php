@@ -247,6 +247,20 @@ class PipedriveApi{
 		return $this->GET('pushNotifications/'.$id);
 	}
 
+	/* STAGES */
+
+	public function getStages($query = []){
+		return $this->GET('stages', $query);
+	}
+
+	public function getStageById($id){
+		return $this->GET('stages/'.$id);
+	}
+
+	public function getStageDeals($id, $query = []){
+		return $this->GET('stages/'.$id.'/deals', $query);
+	}
+
 }
 
 ?>
