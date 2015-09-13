@@ -11,6 +11,8 @@ $pipedrive_client = new PipedriveApi(PIPEDRIVE_API_KEY);
 
 echo '<pre>';
 
+/* DEALS */
+
 // $result = $pipedrive_client->getDeals([ 
 // 	'filter_id' => null,
 // 	'start' => '0',
@@ -78,6 +80,8 @@ echo '<pre>';
 // 	'totals_convert_currency' => null
 // 	]);
 
+/* ORGANIZATIONS */
+
 // $result = $pipedrive_client->getOrganizations([ 
 // 	'filter_id' => null,
 // 	'start' => '0',
@@ -128,11 +132,70 @@ echo '<pre>';
 
 // $result = $pipedrive_client->getOrganizationPermittedUsers(1, 3);
 
-$result = $pipedrive_client->getOrganizationsByName([
-	'term' => 'mohamed',
-	'start' => '1',
-	'limit' => '10'
-	]);
+// $result = $pipedrive_client->getOrganizationsByName([
+// 	'term' => 'mohamed',
+// 	'start' => '1',
+// 	'limit' => '10'
+// 	]);
+
+/* PERSONS */
+
+// $result = $pipedrive_client->getPersons([ 
+// 	'filter_id' => null,
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'sort' => null
+// 	]);
+
+// $result = $pipedrive_client->getPersonById(1);
+
+// $result = $pipedrive_client->getPersonFiles(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'include_deleted_files' => null,
+// 	'sort' => null
+// 	]);
+
+// $result = $pipedrive_client->getPersonFiles(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->getPersonFollowers(1);
+
+// $result = $pipedrive_client->getPersonProducts(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->getPersonDeals([
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'status' => null,
+// 	'sort' => null
+// 	]);
+
+// $result = $pipedrive_client->getPersonUpdates(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->getPersonActivities(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'done' => null,
+// 	'exclude' => null
+// 	]);
+
+// $result = $pipedrive_client->getPersonPermittedUsers(1, 3);
+
+// $result = $pipedrive_client->getPersonsByName([
+// 	'term' => 'mohamed',
+// 	'org_id' => null,
+// 	'start' => '1',
+// 	'limit' => '10',
+// 	'search_by_email' => null
+// 	]);
 
 
 if(isset($result)){
