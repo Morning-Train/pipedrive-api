@@ -268,6 +268,22 @@ echo '<pre>';
 
 // $result = $pipedrive_client->getPushNotificationById(1);
 
+/* STAGES */
+
+// $result = $pipedrive_client->getStages([
+// 	'pipeline_id' => null
+// 	]);
+
+// $result = $pipedrive_client->getStageById(1);
+
+// $result = $pipedrive_client->getStageDeals(1, [
+// 	'filter_id' => null,
+// 	'user_id' => null,
+// 	'everyone' => null,
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
 if(isset($result)){
 	var_dump($result);
 }
