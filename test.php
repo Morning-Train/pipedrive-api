@@ -284,6 +284,51 @@ echo '<pre>';
 // 	'limit' => '10'
 // 	]);
 
+/* USERS */
+
+// $result = $pipedrive_client->getAllUsers();
+
+// $result = $pipedrive_client->getUserById(1);
+
+// $result = $pipedrive_client->getUserActivities(1, [
+// 	'due_date' => null,
+// 	'type' => null,
+// 	'start' => null,
+// 	'limit' => null,
+// 	'done' => null
+// 	]);
+
+// $result = $pipedrive_client->getUserFollowers(1);
+
+// $result = $pipedrive_client->getUserActivities(1, [
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->getUserPermissionSetAssignments(1, [
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->getUserRoleAssignments(1, [
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->getUserRoleSettings(1);
+
+// $result = $pipedrive_client->getUserPermittedItems(1, [
+// 	'access_level' => null
+// 	]);
+
+// $result = $pipedrive_client->getUsersByName([
+// 	'term' => 'mohamed'
+// 	]);
+
+// $result = $pipedrive_client->getUserBlacklistedEmails(1);
+
+
+
 if(isset($result)){
 	var_dump($result);
 }
