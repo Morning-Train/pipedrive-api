@@ -204,9 +204,9 @@ echo '<pre>';
 
 /* PIPELINES */
 
-// $result = getAllPipelines();
+// $result = $pipedrive_client->getAllPipelines();
 
-// $result = getPipelineById(1);
+// $result = $pipedrive_client->getPipelineById(1);
 
 // $result = $pipedrive_client->getPipelineDeals(1, [
 // 	'filter_id' => null,
