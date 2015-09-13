@@ -249,14 +249,14 @@ echo '<pre>';
 // $result = $pipedrive_client->getProductFiles(1, [
 // 	'start' => '0',
 // 	'limit' => '10',
-// 	'include_deleted_files' => null
+// 	'include_deleted_files' => null,
 // 	'sort' => null
 // 	]);
 
 // $result = $pipedrive_client->getProductPermittedUsers(1, 3);
 
 // $result = $pipedrive_client->getProductsByName([
-// 	'term' => '',
+// 	'term' => '12',
 // 	'currency' => 'DKK',
 // 	'start' => '0',
 // 	'limit' => '10'

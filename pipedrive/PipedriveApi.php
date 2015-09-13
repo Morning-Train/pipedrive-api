@@ -25,7 +25,13 @@ class PipedriveApi{
 				]);
 			return $this->checkResponse($response);
 		} catch (ClientException $e) {
+			echo '<h1>Error!!!</h1>';
+			echo '<h3>Message:</h3>';
 			echo $e->getMessage();
+			echo '<h3>Request Uri:</h3>';
+			echo $e->getRequest()->getUri();
+			echo '<h3>Response body:</h3>';
+			echo $e->getResponse()->getBody();
 		}
 	}
 	
@@ -203,6 +209,35 @@ class PipedriveApi{
 	public function getPipelineMovementsStats($id, $query = []){
 		return $this->GET('pipelines/'.$id.'/movement_statistics', $query);
 	}
+
+	/* PRODUCTS */
+
+	public function getAllProducts($query = []){
+		return $this->GET('products', $query);
+	}
+
+	public function getProductById($id){
+		return $this->GET('products/'.$id);
+	}
+
+	public function getProductDeals($id, $query){
+		return $this->GET('products/'.$id.'/deals', $query);
+	}
+
+	public function getProductFiles($id, $query){
+		return $this->GET('products/'.$id.'/files', $query);
+	}
+
+	public function getProductPermittedUsers($id, $accessLevel){
+		$query['access_level'] = $accessLevel;
+		return $this->GET('products/'.$id.'/permittedUsers', $query);
+	}
+
+	public function getProductsByName($query){
+		return $this->GET('products/find', $query);
+	}
+
+
 }
 
 ?>
