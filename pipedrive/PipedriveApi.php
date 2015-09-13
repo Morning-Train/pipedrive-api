@@ -181,6 +181,28 @@ class PipedriveApi{
 	public function getPersonsByName($query = []){
 		return $this->GET('persons/find', $query);
 	}
+
+	/* PIPELINES */
+
+	public function getAllPipelines(){
+		return $this->GET('pipelines');
+	}
+
+	public function getPipelineById($id){
+		return $this->GET('pipelines/'.$id);
+	}
+
+	public function getPipelineDeals($id, $query = []){
+		return $this->GET('pipelines/'.$id.'/deals', $query);
+	}
+
+	public function getPipelineConversionRatesStats($id, $query = []){
+		return $this->GET('pipelines/'.$id.'/conversion_statistics', $query);
+	}
+
+	public function getPipelineMovementsStats($id, $query = []){
+		return $this->GET('pipelines/'.$id.'/movement_statistics', $query);
+	}
 }
 
 ?>
