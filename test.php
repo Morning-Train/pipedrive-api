@@ -152,11 +152,16 @@ echo '<pre>';
 // $result = $pipedrive_client->getPersonFiles(1, [ 
 // 	'start' => '0',
 // 	'limit' => '10',
-// 	'include_deleted_files' => null,
+// 	'include_deleted_files' => '1',
 // 	'sort' => null
 // 	]);
 
 // $result = $pipedrive_client->getPersonFiles(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->getPersonEmailMessages(1, [ 
 // 	'start' => '0',
 // 	'limit' => '10'
 // 	]);
@@ -168,7 +173,7 @@ echo '<pre>';
 // 	'limit' => '10'
 // 	]);
 
-// $result = $pipedrive_client->getPersonDeals([
+// $result = $pipedrive_client->getPersonDeals(1, [
 // 	'start' => '0',
 // 	'limit' => '10',
 // 	'status' => null,
