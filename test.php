@@ -231,7 +231,36 @@ echo '<pre>';
 // 	'user_id' => null
 // 	]);
 
+/* PRODUCTS */
 
+// $result = $pipedrive_client->getAllProducts([
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->getProductById(1);
+
+// $result = $pipedrive_client->getProductDeals(1, [
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'status' => null
+// 	]);
+
+// $result = $pipedrive_client->getProductFiles(1, [
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'include_deleted_files' => null
+// 	'sort' => null
+// 	]);
+
+// $result = $pipedrive_client->getProductPermittedUsers(1, 3);
+
+// $result = $pipedrive_client->getProductsByName([
+// 	'term' => '',
+// 	'currency' => 'DKK',
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
 
 if(isset($result)){
 	var_dump($result);
