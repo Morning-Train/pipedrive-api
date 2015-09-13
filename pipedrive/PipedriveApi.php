@@ -237,6 +237,15 @@ class PipedriveApi{
 		return $this->GET('products/find', $query);
 	}
 
+	/*PUSH NOTIFICATIONS*/
+
+	public function getAllPushNotifications(){
+		return $this->GET('pushNotifications');
+	}
+
+	public function getPushNotificationById($id){
+		return $this->GET('pushNotifications/'.$id);
+	}
 
 }
 
