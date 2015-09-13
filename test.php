@@ -288,36 +288,38 @@ echo '<pre>';
 
 // $result = $pipedrive_client->getAllUsers();
 
-// $result = $pipedrive_client->getUserById(1);
+// $result = $pipedrive_client->getUserById(825469);
 
-// $result = $pipedrive_client->getUserActivities(1, [
+// $result = $pipedrive_client->getUserActivities(825469, [
 // 	'due_date' => null,
 // 	'type' => null,
-// 	'start' => null,
-// 	'limit' => null,
+// 	'start' => '0',
+// 	'limit' => '10',
 // 	'done' => null
 // 	]);
 
-// $result = $pipedrive_client->getUserFollowers(1);
+// $result = $pipedrive_client->getUserFollowers(825469);
 
-// $result = $pipedrive_client->getUserActivities(1, [
+// $result = $pipedrive_client->getUserUpdates(825469, [
 // 	'start' => '0',
 // 	'limit' => '10'
 // 	]);
 
-// $result = $pipedrive_client->getUserPermissionSetAssignments(1, [
+// $result = $pipedrive_client->getUserPermissionSetAssignments(825469, [
 // 	'start' => '0',
 // 	'limit' => '10'
 // 	]);
 
-// $result = $pipedrive_client->getUserRoleAssignments(1, [
+// $result = $pipedrive_client->getUserRoleAssignments(825469, [
 // 	'start' => '0',
 // 	'limit' => '10'
 // 	]);
 
-// $result = $pipedrive_client->getUserRoleSettings(1);
+// $result = $pipedrive_client->getUserRoleSettings(825469);
 
-// $result = $pipedrive_client->getUserPermittedItems(1, [
+// $result = $pipedrive_client->getUserPermissions(825469);
+
+// $result = $pipedrive_client->getUserPermittedItems(825469, [
 // 	'access_level' => null
 // 	]);
 
@@ -325,9 +327,7 @@ echo '<pre>';
 // 	'term' => 'mohamed'
 // 	]);
 
-// $result = $pipedrive_client->getUserBlacklistedEmails(1);
-
-
+//$result = $pipedrive_client->getUserBlacklistedEmails(825469);
 
 if(isset($result)){
 	var_dump($result);

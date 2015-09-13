@@ -233,7 +233,7 @@ class PipedriveApi{
 		return $this->GET('products/'.$id.'/permittedUsers', $query);
 	}
 
-	public function getProductsByName($query){
+	public function getProductsByName($query = []){
 		return $this->GET('products/find', $query);
 	}
 
@@ -259,6 +259,56 @@ class PipedriveApi{
 
 	public function getStageDeals($id, $query = []){
 		return $this->GET('stages/'.$id.'/deals', $query);
+	}
+
+	/* USERS */
+
+	public function getAllUsers(){
+		return $this->GET('users');
+	}
+
+	public function getUserById($id){
+		return $this->GET('users/'.$id);
+	}
+
+	public function getUserActivities($id, $query = []){
+		return $this->GET('users/'.$id.'/activities', $query);
+	}
+
+	public function getUserFollowers($id){
+		return $this->GET('users/'.$id.'/followers');
+	}
+
+	public function getUserUpdates($id, $query = []){
+		return $this->GET('users/'.$id.'/updates', $query);
+	}
+
+	public function getUserPermissionSetAssignments($id, $query = []){
+		return $this->GET('users/'.$id.'/permissionSetAssignments', $query);
+	}
+
+	public function getUserRoleAssignments($id, $query = []){
+		return $this->GET('users/'.$id.'/roleAssignments', $query);
+	}
+
+	public function getUserRoleSettings($id){
+		return $this->GET('users/'.$id.'/roleSettings');
+	}
+
+	public function getUserPermissions($id){
+		return $this->GET('users/'.$id.'/permissions');
+	}
+
+	public function getUserPermittedItems($id, $query = []){
+		return $this->GET('users/'.$id.'/permittedItems', $query);
+	}
+
+	public function getUsersByName($query = []){
+		return $this->GET('users/find', $query);
+	}
+
+	public function getUserBlacklistedEmails($id){
+		return $this->GET('users/'.$id.'/blacklistedEmails');
 	}
 
 }
