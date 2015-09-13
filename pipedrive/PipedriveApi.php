@@ -139,6 +139,48 @@ class PipedriveApi{
 		return $this->GET('organizations/find', $query);
 	}
 
+	/* PERSONS */
+
+	public function getPersons($query = []){
+		return $this->GET('persons', $query);
+	}
+
+	public function getPersonById($id){
+		return $this->GET('persons/'.$id);
+	}
+
+	public function getPersonFiles($id, $query = []){
+		return $this->GET('persons/'.$id.'/files', $query);
+	}
+
+	public function getPersonEmailMessages($id, $query = []){
+		return $this->GET('persons/'.$id.'/emailMessages', $query);
+	}
+
+	public function getPersonFollowers($id){
+		return $this->GET('persons/'.$id.'/followers');
+	}
+
+	public function getPersonProducts($id, $query = []){
+		return $this->GET('persons/'.$id.'/products', $query);
+	}
+
+	public function getPersonDeals($id, $query = []){
+		return $this->GET('persons/'.$id.'/deals', $query);
+	}
+
+	public function getPersonActivities($id, $query = []){
+		return $this->GET('persons/'.$id.'/activities', $query);
+	}
+
+	public function getPersonPermittedUsers($id, $accessLevel){
+		$query['access_level'] = $accessLevel;
+		return $this->GET('persons/'.$id.'/permittedUsers', $query);
+	}
+
+	public function getPersonsByName($query = []){
+		return $this->GET('persons/find', $query);
+	}
 }
 
 ?>
