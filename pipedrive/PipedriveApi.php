@@ -136,8 +136,7 @@ class PipedriveApi{
 		return $this->GET('organizations/'.$id.'/updates', $query);
 	}
 
-	public function getOrganizationPermittedUsers($id, $accessLevel){
-		$query['access_level'] = $accessLevel;
+	public function getOrganizationPermittedUsers($id, $query = []){
 		return $this->GET('organizations/'.$id.'/permittedUsers', $query);
 	}
 
@@ -179,8 +178,7 @@ class PipedriveApi{
 		return $this->GET('persons/'.$id.'/activities', $query);
 	}
 
-	public function getPersonPermittedUsers($id, $accessLevel){
-		$query['access_level'] = $accessLevel;
+	public function getPersonPermittedUsers($id, $query = []){
 		return $this->GET('persons/'.$id.'/permittedUsers', $query);
 	}
 
@@ -220,16 +218,15 @@ class PipedriveApi{
 		return $this->GET('products/'.$id);
 	}
 
-	public function getProductDeals($id, $query){
+	public function getProductDeals($id, $query = []){
 		return $this->GET('products/'.$id.'/deals', $query);
 	}
 
-	public function getProductFiles($id, $query){
+	public function getProductFiles($id, $query = []){
 		return $this->GET('products/'.$id.'/files', $query);
 	}
 
-	public function getProductPermittedUsers($id, $accessLevel){
-		$query['access_level'] = $accessLevel;
+	public function getProductPermittedUsers($id, $query = []){
 		return $this->GET('products/'.$id.'/permittedUsers', $query);
 	}
 

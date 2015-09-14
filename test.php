@@ -130,7 +130,9 @@ echo '<pre>';
 // 	'limit' => '10'
 // 	]);
 
-// $result = $pipedrive_client->getOrganizationPermittedUsers(1, 3);
+// $result = $pipedrive_client->getOrganizationPermittedUsers(1, [
+// 	'access_level' => '3'
+// 	]);
 
 // $result = $pipedrive_client->getOrganizationsByName([
 // 	'term' => 'mohamed',
@@ -192,7 +194,9 @@ echo '<pre>';
 // 	'exclude' => null
 // 	]);
 
-// $result = $pipedrive_client->getPersonPermittedUsers(1, 3);
+// $result = $pipedrive_client->getPersonPermittedUsers(1, [
+// 	'access_level' => '3'
+// 	]);
 
 // $result = $pipedrive_client->getPersonsByName([
 // 	'term' => 'mohamed',
@@ -253,7 +257,9 @@ echo '<pre>';
 // 	'sort' => null
 // 	]);
 
-// $result = $pipedrive_client->getProductPermittedUsers(1, 3);
+// $result = $pipedrive_client->getProductPermittedUsers(1, [
+// 	'access_level' => '3'
+// 	]);
 
 // $result = $pipedrive_client->getProductsByName([
 // 	'term' => '12',
