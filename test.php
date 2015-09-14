@@ -363,6 +363,18 @@ echo '<pre>';
 
 // $result = $pipedrive_client->getPipelineById(1);
 
+// $result = $pipedrive_client->createPipeline([
+// 	'name' => 'Created by API',
+// 	'order_nr' => null,
+// 	'active' => null
+// 	]);
+
+// $result = $pipedrive_client->updatePipeline(1, [
+// 	'name' => 'Updated by API',
+// 	'order_nr' => null,
+// 	'active' => 1
+// 	]);
+
 // $result = $pipedrive_client->getPipelineDeals(1, [
 // 	'filter_id' => null,
 // 	'user_id' => null,
@@ -373,6 +385,8 @@ echo '<pre>';
 // 	'get_summary' => null,
 // 	'total_convert_currency' => null
 // 	]);
+
+// $result = $pipedrive_client->deletePipeline(2);
 
 // $result = $pipedrive_client->getPipelineConversionRatesStats(1, [
 // 	'start_date' => '2015-05-12',

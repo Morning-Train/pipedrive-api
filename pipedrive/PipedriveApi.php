@@ -380,8 +380,20 @@ class PipedriveApi{
 		return $this->GET('pipelines/'.$id);
 	}
 
+	public function createPipeline($args){
+		return $this->POST('pipelines', $args);
+	}
+
+	public function updatePipeline($id, $args){
+		return $this->PUT('pipelines/'.$id, $args);
+	}
+
 	public function getPipelineDeals($id, $query = []){
 		return $this->GET('pipelines/'.$id.'/deals', $query);
+	}
+
+	public function deletePipeline($id){
+		return $this->DELETE('pipelines/'.$id);
 	}
 
 	public function getPipelineConversionRatesStats($id, $query = []){
