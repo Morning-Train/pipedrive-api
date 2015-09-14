@@ -415,6 +415,29 @@ echo '<pre>';
 // 	'status' => null
 // 	]);
 
+// $result = $pipedrive_client->createProduct([
+// 	'name' => 'created by api',
+// 	'code' => null,
+// 	'unit' => null,
+// 	'tax' => null,
+// 	'active_flag' => 1,
+// 	'visible_to' => null,
+// 	'owner_id' => null,
+// 	]);
+
+// $result = $pipedrive_client->updateProduct(1, [
+// 	'name' => 'created by api',
+// 	'code' => null,
+// 	'unit' => null,
+// 	'tax' => null,
+// 	'active_flag' => 1,
+// 	'visible_to' => null,
+// 	'owner_id' => null,
+// 	'prices' => null
+// 	]);
+
+// $result = $pipedrive_client->deleteProduct(1);
+
 // $result = $pipedrive_client->getProductFiles(1, [
 // 	'start' => '0',
 // 	'limit' => '10',

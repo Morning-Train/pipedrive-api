@@ -418,6 +418,18 @@ class PipedriveApi{
 		return $this->GET('products/'.$id.'/deals', $query);
 	}
 
+	public function createProduct($args){
+		return $this->POST('products', $args);
+	}
+
+	public function updateProduct($id, $args){
+		return $this->PUT('products/'.$id, $args);
+	}
+
+	public function deleteProduct($id){
+		return $this->DELETE('products/'.$id);
+	}
+
 	public function getProductFiles($id, $query = []){
 		return $this->GET('products/'.$id.'/files', $query);
 	}
