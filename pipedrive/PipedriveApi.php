@@ -34,10 +34,77 @@ class PipedriveApi{
 			echo $e->getResponse()->getBody();
 		}
 	}
-	
+
+	private function POST($endpoint, $args = []){		
+		try {
+			$query['api_token'] = $this->api_token;
+			$response = $this->client->request('POST', $endpoint,[
+				'query' => $query,
+				'json' => $args
+				]);
+			return $this->checkResponse($response);
+		} catch (ClientException $e) {
+			echo '<h1>Error!!!</h1>';
+			echo '<h3>Message:</h3>';
+			echo $e->getMessage();
+			echo '<h3>Request Uri:</h3>';
+			echo $e->getRequest()->getUri();
+			echo '<h3>Request Body:</h3>';
+			echo $e->getRequest()->getBody();
+			echo '<h3>Response body:</h3>';
+			echo $e->getResponse()->getBody();
+			return false;
+		}
+	}
+
+	private function PUT($endpoint, $args = []){		
+		try {
+			$query['api_token'] = $this->api_token;
+			$response = $this->client->request('PUT', $endpoint,[
+				'query' => $query,
+				'json' => $args
+				]);
+			return $this->checkResponse($response);
+		} catch (ClientException $e) {
+			echo '<h1>Error!!!</h1>';
+			echo '<h3>Message:</h3>';
+			echo $e->getMessage();
+			echo '<h3>Request Uri:</h3>';
+			echo $e->getRequest()->getUri();
+			echo '<h3>Request Body:</h3>';
+			echo $e->getRequest()->getBody();
+			echo '<h3>Response body:</h3>';
+			echo $e->getResponse()->getBody();
+			return false;
+		}
+	}
+
+	private function DELETE($endpoint, $args = []){		
+		try {
+			$query['api_token'] = $this->api_token;
+			$response = $this->client->request('DELETE', $endpoint,[
+				'query' => $query,
+				'json' => $args
+				]);
+			return $this->checkResponse($response);
+		} catch (ClientException $e) {
+			echo '<h1>Error!!!</h1>';
+			echo '<h3>Message:</h3>';
+			echo $e->getMessage();
+			echo '<h3>Request Uri:</h3>';
+			echo $e->getRequest()->getUri();
+			echo '<h3>Request Body:</h3>';
+			echo $e->getRequest()->getBody();
+			echo '<h3>Response body:</h3>';
+			echo $e->getResponse()->getBody();
+			return false;
+		}
+	}	
 	
 	private function checkResponse($response) {
-		if($response->getStatusCode() == 200) {
+		$success = [200, 201];
+		$statusCode = $response->getStatusCode();
+		if(in_array($statusCode, $success)) {
 			$data = json_decode($response->getBody());
 			if(is_object($data) && isset($data->data)){
 				$data = $data->data;
@@ -57,12 +124,56 @@ class PipedriveApi{
 		return $this->GET('deals/'.$id);
 	}
 
+	public function createDeal($args){
+		return $this->POST('deals', $args);
+	}
+
+	public function updateDeal($id, $args){
+		return $this->PUT('deals/'.$id, $args);
+	}
+
+	public function deleteDeal($id){
+		return $this->DELETE('deals/'.$id);
+	}
+
+	public function deleteMultipleDeals($args){
+		return $this->DELETE('deals', $args);
+	}
+
+	public function duplicateDeal($id){
+		return $this->POST('deals/'.$id.'/duplicate');
+	}
+
+	public function mergeDeal($id, $args){
+		return $this->PUT('deals/'.$id.'/merge', $args);
+	}
+
+	public function followDeal($id, $args){
+		return $this->POST('deals/'.$id.'/followers', $args);
+	}
+
 	public function getDealFollowers($id){
 		return $this->GET('deals/'.$id.'/followers');
 	}
 
+	public function unfollowDeal($id, $followerId){
+		return $this->DELETE('deals/'.$id.'/followers/'.$followerId);
+	}
+
 	public function getDealProducts($id, $query = []){
 		return $this->GET('deals/'.$id.'/products', $query);
+	}
+
+	public function addProductToDeal($id, $args){
+		return $this->POST('deals/'.$id.'/products', $args);
+	}
+
+	public function updateDealProduct($id, $dealProductId, $args){
+		return $this->PUT('deals/'.$id.'/products/'.$dealProductId, $args);
+	}
+
+	public function removeProductFromDeal($id, $args){
+		return $this->DELETE('deals/'.$id.'/products/', $args);
 	}
 
 	public function getDealActivities($id, $query = []){
@@ -73,8 +184,16 @@ class PipedriveApi{
 		return $this->GET('deals/'.$id.'/updates', $query);
 	}
 
+	public function addParticipantToDeal($id, $args){
+		return $this->POST('deals/'.$id.'/participants', $args);
+	}
+
 	public function getDealParticipants($id, $query = []){
 		return $this->GET('deals/'.$id.'/participants', $query);
+	}
+
+	public function removeParticipantFromDeal($id, $dealParticipantId){
+		return $this->DELETE('deals/'.$id.'/participants/'.$dealParticipantId);
 	}
 
 	public function getDealFiles($id, $query = []){

@@ -23,12 +23,83 @@ echo '<pre>';
 
 // $result = $pipedrive_client->getDealById(1);
 
-// $result = $pipedrive_client->getDealFollowers(1);
+// $result = $pipedrive_client->createDeal([
+// 	'title' => 'Created by API',
+// 	'value' => '6000',
+// 	'currency' => 'DKK',
+// 	'user_id' => '825469',
+// 	'person_id' => null,
+// 	'org_id' => null,
+// 	'stage_id' => null,
+// 	'status' => null,
+// 	'lost_reason' => null,
+// 	'add_time' => null,
+// 	'visible_to' => null
+// 	]);
+
+// $result = $pipedrive_client->updateDeal(3, [
+// 	'title' => 'Updated by API',
+// 	'value' => '6000',
+// 	'currency' => 'DKK',
+// 	'user_id' => '825469',
+// 	'person_id' => null,
+// 	'org_id' => null,
+// 	'stage_id' => null,
+// 	'status' => null,
+// 	'lost_reason' => null,
+// 	'add_time' => null,
+// 	'visible_to' => null
+// 	]);
+
+// $result = $pipedrive_client->deleteDeal(5);
+
+// $result = $pipedrive_client->deleteMultipleDeals([
+// 	'ids' => '6,7,8'
+// 	]);
+
+// $result = $pipedrive_client->duplicateDeal(3);
+
+// $result = $pipedrive_client->mergeDeal(4, [
+// 	'merge_with_id' => 9
+// 	]);
+
+// $result = $pipedrive_client->followDeal(3, [
+// 	'user_id' => 825469
+// 	]);
+
+// $result = $pipedrive_client->getDealFollowers(3);
+
+// $result = $pipedrive_client->unfollowDeal(3, 825469);
 
 // $result = $pipedrive_client->getDealProducts(1, [ 
 // 	'start' => '1',
 // 	'limit' => '10',
 // 	'include_product_data' => '1'
+// 	]);
+
+// $result = $pipedrive_client->addProductToDeal(3, [
+// 	'product_id' => 825469,
+// 	'item_price' => 200,
+// 	'quantity' => 5,
+// 	'discount_percentage' => null,
+// 	'duration' => null,
+// 	'product_variation_id' => null,
+// 	'comment' => null,
+// 	'enabled_flag' => null
+// 	]);
+
+// $result = $pipedrive_client->updateDealProduct(3, 825469, [
+// 	'item_price' => 200,
+// 	'quantity' => 5,
+// 	'discount_percentage' => null,
+// 	'duration' => null,
+// 	'product_variation_id' => null,
+// 	'comment' => null,
+// 	'enabled_flag' => null
+// 	]);
+
+// $result = $pipedrive_client->removeProductFromDeal(3, [
+// 	'product_attachment_id' => 1,
 // 	]);
 
 // $result = $pipedrive_client->getDealActivities(1, [ 
@@ -43,10 +114,16 @@ echo '<pre>';
 // 	'limit' => '10'
 // 	]);
 
+// $result = $pipedrive_client->addParticipantToDeal(3, [
+// 	'person_id' => 1,
+// 	]);
+
 // $result = $pipedrive_client->getDealParticipants(1, [ 
 // 	'start' => '1',
 // 	'limit' => '10'
 // 	]);
+
+// $result = $pipedrive_client->removeParticipantFromDeal(3, 1);
 
 // $result = $pipedrive_client->getDealFiles(1, [ 
 // 	'start' => '1',
