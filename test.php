@@ -462,6 +462,16 @@ echo '<pre>';
 
 // $result = $pipedrive_client->getPushNotificationById(1);
 
+// $result = $pipedrive_client->createPushNotification([
+// 	'user_id' => 825469,
+// 	'subscription_url' => 'google.com',
+// 	'event' => 'message',
+// 	'http_auth_user' => null,
+// 	'http_auth_password' => null
+// 	]);
+
+$result = $pipedrive_client->deletePushNotification(1);
+
 /* STAGES */
 
 // $result = $pipedrive_client->getStages([

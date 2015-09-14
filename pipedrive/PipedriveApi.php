@@ -452,6 +452,14 @@ class PipedriveApi{
 		return $this->GET('pushNotifications/'.$id);
 	}
 
+	public function createPushNotification($args){
+		return $this->POST('pushNotifications', $args);
+	}
+
+	public function deletePushNotification($id){
+		return $this->DELETE('pushNotifications/'.$id);
+	}
+
 	/* STAGES */
 
 	public function getStages($query = []){
