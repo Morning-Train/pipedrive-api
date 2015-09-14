@@ -227,6 +227,22 @@ class PipedriveApi{
 		return $this->GET('organizations/'.$id);
 	}
 
+	public function addOrganization($args){
+		return $this->POST('organizations', $args);
+	}
+
+	public function updateOrganization($id, $args){
+		return $this->PUT('organizations/'.$id, $args);
+	}
+
+	public function deleteOrganization($id){
+		return $this->DELETE('organizations/'.$id);
+	}
+
+	public function deleteMultipleOrganizations($args){
+		return $this->DELETE('organizations', $args);
+	}
+
 	public function getOrganizationFiles($id, $query = []){
 		return $this->GET('organizations/'.$id.'/files', $query);
 	}
@@ -235,9 +251,18 @@ class PipedriveApi{
 		return $this->GET('organizations/'.$id.'/emailMessages', $query);
 	}
 
+	public function followOrganization($id, $args){
+		return $this->POST('organizations/'.$id.'/followers', $args);
+	}
+
 	public function getOrganizationFollowers($id){
 		return $this->GET('organizations/'.$id.'/followers');
 	}
+
+	public function unfollowOrganization($id, $followerId){
+		return $this->DELETE('organizations/'.$id.'/followers/'.$followerId);
+	}
+
 
 	public function getOrganizationPersons($id, $query = []){
 		return $this->GET('organizations/'.$id.'/persons', $query);
@@ -257,6 +282,10 @@ class PipedriveApi{
 
 	public function getOrganizationPermittedUsers($id, $query = []){
 		return $this->GET('organizations/'.$id.'/permittedUsers', $query);
+	}
+
+	public function mergeOrganization($id, $args){
+		return $this->PUT('organizations/'.$id.'/merge', $args);
 	}
 
 	public function getOrganizationsByName($query = []){

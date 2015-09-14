@@ -168,6 +168,25 @@ echo '<pre>';
 
 // $result = $pipedrive_client->getOrganizationById(1);
 
+// $result = $pipedrive_client->addOrganization([ 
+// 	'name' => 'org created by the API',
+// 	'owner_id' => null,
+// 	'visible_to' => null,
+// 	'add_time' => null
+// 	]);
+
+// $result = $pipedrive_client->updateOrganization(1, [ 
+// 	'name' => 'org created by the API',
+// 	'owner_id' => null,
+// 	'visible_to' => null,
+// 	]);
+
+// $result = $pipedrive_client->deleteOrganization(1);
+
+// $result = $pipedrive_client->deleteMultipleOrganizations([
+// 	'ids' => '1,2,3'
+// 	]);
+
 // $result = $pipedrive_client->getOrganizationFiles(1, [ 
 // 	'start' => '1',
 // 	'limit' => '10',
@@ -180,7 +199,13 @@ echo '<pre>';
 // 	'limit' => '12'
 // 	]);
 
+// $result = $pipedrive_client->followOrganization(1, [
+// 	'user_id' => 825469
+// 	]);
+
 // $result = $pipedrive_client->getOrganizationFollowers(1);
+
+// $result = $pipedrive_client->unfollowOrganization(1, 825469);
 
 // $result = $pipedrive_client->getOrganizationPersons(1, [ 
 // 	'start' => '1',
@@ -209,6 +234,10 @@ echo '<pre>';
 
 // $result = $pipedrive_client->getOrganizationPermittedUsers(1, [
 // 	'access_level' => '3'
+// 	]);
+
+// $result = $pipedrive_client->mergeOrganization(1, [
+// 	'merge_with_id' => '3'
 // 	]);
 
 // $result = $pipedrive_client->getOrganizationsByName([
