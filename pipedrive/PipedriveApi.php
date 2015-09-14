@@ -474,6 +474,22 @@ class PipedriveApi{
 		return $this->GET('stages/'.$id.'/deals', $query);
 	}
 
+	public function createStage($args){
+		return $this->POST('stages', $args);
+	}
+
+	public function updateStage($id, $args){
+		return $this->PUT('stages/'.$id, $args);
+	}
+
+	public function deleteStage($id){
+		return $this->DELETE('stages/'.$id);
+	}
+
+	public function deleteMultipleStages($args){
+		return $this->DELETE('stages', $args);
+	}
+
 	/* USERS */
 
 	public function getAllUsers(){

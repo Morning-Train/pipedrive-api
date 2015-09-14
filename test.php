@@ -470,7 +470,7 @@ echo '<pre>';
 // 	'http_auth_password' => null
 // 	]);
 
-$result = $pipedrive_client->deletePushNotification(1);
+// $result = $pipedrive_client->deletePushNotification(1);
 
 /* STAGES */
 
@@ -486,6 +486,29 @@ $result = $pipedrive_client->deletePushNotification(1);
 // 	'everyone' => null,
 // 	'start' => '0',
 // 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->createStage([
+// 	'name' => 'Stage created by Api',
+// 	'pipeline_id' => 1,
+// 	'deal_probability' => null,
+// 	'rotten_flag' => null,
+// 	'rotten_days' => null
+// 	]);
+
+// $result = $pipedrive_client->updateStage(7, [
+// 	'name' => 'Stage updated by Api',
+// 	'pipeline_id' => 1,
+// 	'order_nr' => null,
+// 	'deal_probability' => null,
+// 	'rotten_flag' => null,
+// 	'rotten_days' => null
+// 	]);
+
+// $result = $pipedrive_client->deleteStage(8);
+
+// $result = $pipedrive_client->deleteMultipleStages([
+// 	'ids' => '9,10'
 // 	]);
 
 /* USERS */
