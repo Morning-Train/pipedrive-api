@@ -568,6 +568,14 @@ class PipedriveApi{
 		return $this->POST('users/'.$id.'/blacklistedEmails', $args);
 	}
 
+	public function getAllUserConnections(){
+		return $this->GET('userConnections');
+	}
+
+	public function getUserSettings(){
+		return $this->GET('userSettings');
+	}
+
 }
 
 ?>

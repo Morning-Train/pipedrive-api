@@ -11,6 +11,55 @@ $pipedrive_client = new PipedriveApi(PIPEDRIVE_API_KEY);
 
 echo '<pre>';
 
+/* ACTIVITIES */
+
+// $result = $pipedrive_client->getActivities([ 
+// 	'user_id' => null,
+// 	'type' => null,
+// 	'start' => '1',
+// 	'limit' => '10',
+// 	'start_date' => null,
+// 	'end_date' => null,
+// 	'done' => null
+// 	]);
+
+// $result = $pipedrive_client->getActivityById(1);
+
+// $result = $pipedrive_client->createActivity([ 
+// 	'subject' => 'created by API',
+// 	'done' => null,
+// 	'type' => 'type_1',
+// 	'due_date' => null,
+// 	'due_time' => null,
+// 	'duration' => null,
+// 	'user_id' => null,
+// 	'deal_id' => null,
+// 	'person_id' => null,
+// 	'org_id' => null,
+// 	'note' => null,
+// 	]);
+
+// $result = $pipedrive_client->updateActivity(1, [ 
+// 	'subject' => 'created by API',
+// 	'done' => null,
+// 	'type' => 'type_1',
+// 	'due_date' => null,
+// 	'due_time' => null,
+// 	'duration' => null,
+// 	'user_id' => null,
+// 	'deal_id' => null,
+// 	'person_id' => null,
+// 	'org_id' => null,
+// 	'note' => null,
+// 	]);
+
+// $result = $pipedrive_client->deleteActivity(1);
+
+// $result = $pipedrive_client->deleteMultipleActivities([
+// 	'ids' => '1,2,3'
+// 	]);
+
+
 /* DEALS */
 
 // $result = $pipedrive_client->getDeals([ 
@@ -511,11 +560,11 @@ echo '<pre>';
 // 	'ids' => '9,10'
 // 	]);
 
-// /* USERS */
+/* USERS */
 
-// // $result = $pipedrive_client->getAllUsers();
+// $result = $pipedrive_client->getAllUsers();
 
-// // $result = $pipedrive_client->getUserById(825469);
+// $result = $pipedrive_client->getUserById(825469);
 
 // $result = $pipedrive_client->createUser([
 // 	'name' => 'User Create_by_api',
@@ -527,25 +576,25 @@ echo '<pre>';
 // 	'active_flag' => 1
 // 	]);
 
-// // $result = $pipedrive_client->getUserActivities(825469, [
-// // 	'due_date' => null,
-// // 	'type' => null,
-// // 	'start' => '0',
-// // 	'limit' => '10',
-// // 	'done' => null
-// // 	]);
+// $result = $pipedrive_client->getUserActivities(825469, [
+// 	'due_date' => null,
+// 	'type' => null,
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'done' => null
+// 	]);
 
-// // $result = $pipedrive_client->getUserFollowers(825469);
+// $result = $pipedrive_client->getUserFollowers(825469);
 
-// // $result = $pipedrive_client->getUserUpdates(825469, [
-// // 	'start' => '0',
-// // 	'limit' => '10'
-// // 	]);
+// $result = $pipedrive_client->getUserUpdates(825469, [
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
 
-// // $result = $pipedrive_client->getUserPermissionSetAssignments(825469, [
-// // 	'start' => '0',
-// // 	'limit' => '10'
-// // 	]);
+// $result = $pipedrive_client->getUserPermissionSetAssignments(825469, [
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
 
 // $result = $pipedrive_client->assignPermissionSetToUser(831833, [
 // 	'permission_set_id' => '1'
@@ -555,10 +604,10 @@ echo '<pre>';
 // 	'permission_set_id' => '1'
 // 	]);
 
-// // $result = $pipedrive_client->getUserRoleAssignments(825469, [
-// // 	'start' => '0',
-// // 	'limit' => '10'
-// // 	]);
+// $result = $pipedrive_client->getUserRoleAssignments(825469, [
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
 
 // $result = $pipedrive_client->assignRoleToUser(825469, [
 // 	'role_id' => '1'
@@ -568,23 +617,31 @@ echo '<pre>';
 // 	'role_id' => '1'
 // 	]);
 
-// // $result = $pipedrive_client->getUserRoleSettings(825469);
+// $result = $pipedrive_client->getUserRoleSettings(825469);
 
-// // $result = $pipedrive_client->getUserPermissions(825469);
+// $result = $pipedrive_client->getUserPermissions(825469);
 
-// // $result = $pipedrive_client->getUserPermittedItems(825469, [
-// // 	'access_level' => null
-// // 	]);
+// $result = $pipedrive_client->getUserPermittedItems(825469, [
+// 	'access_level' => null
+// 	]);
 
-// // $result = $pipedrive_client->getUsersByName([
-// // 	'term' => 'mohamed'
-// // 	]);
+// $result = $pipedrive_client->getUsersByName([
+// 	'term' => 'mohamed'
+// 	]);
 
-// //$result = $pipedrive_client->getUserBlacklistedEmails(825469);
+// $result = $pipedrive_client->getUserBlacklistedEmails(825469);
 
-$result = $pipedrive_client->addBlacklistedEmailsToUser(825469, [
-	'address' => 'foo@bar.com'
-	]);
+// $result = $pipedrive_client->addBlacklistedEmailsToUser(825469, [
+// 	'address' => 'foo@bar.com'
+// 	]);
+
+/* USER CONNECTIONS */
+
+// $result = $pipedrive_client->getAllUserConnections();
+
+/* USER SETTINGS */
+
+// $result = $pipedrive_client->getUserSettings();
 
 if(isset($result)){
 	var_dump($result);
