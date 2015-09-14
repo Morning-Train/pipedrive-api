@@ -500,6 +500,14 @@ class PipedriveApi{
 		return $this->GET('users/'.$id);
 	}
 
+	public function createUser($args){
+		return $this->POST('users', $args);
+	}
+
+	public function updateUser($id, $args){
+		return $this->PUT('users/'.$id, $args);
+	}
+
 	public function getUserActivities($id, $query = []){
 		return $this->GET('users/'.$id.'/activities', $query);
 	}
@@ -516,8 +524,24 @@ class PipedriveApi{
 		return $this->GET('users/'.$id.'/permissionSetAssignments', $query);
 	}
 
+	public function assignPermissionSetToUser($id, $args){
+		return $this->POST('users/'.$id.'/permissionSetAssignments', $args);
+	}
+
+	public function removePermissionSetFromUser($id, $args){
+		return $this->DELETE('users/'.$id.'/permissionSetAssignments', $args);
+	}
+
 	public function getUserRoleAssignments($id, $query = []){
 		return $this->GET('users/'.$id.'/roleAssignments', $query);
+	}
+
+	public function assignRoleToUser($id, $args){
+		return $this->POST('users/'.$id.'/roleAssignments', $args);
+	}
+
+	public function removeRoleFromUser($id, $args){
+		return $this->POST('users/'.$id.'/roleAssignments', $args);
 	}
 
 	public function getUserRoleSettings($id){
@@ -538,6 +562,10 @@ class PipedriveApi{
 
 	public function getUserBlacklistedEmails($id){
 		return $this->GET('users/'.$id.'/blacklistedEmails');
+	}
+
+	public function addBlacklistedEmailsToUser($id, $args){
+		return $this->POST('users/'.$id.'/blacklistedEmails', $args);
 	}
 
 }

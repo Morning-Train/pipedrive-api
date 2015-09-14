@@ -511,50 +511,80 @@ echo '<pre>';
 // 	'ids' => '9,10'
 // 	]);
 
-/* USERS */
+// /* USERS */
 
-// $result = $pipedrive_client->getAllUsers();
+// // $result = $pipedrive_client->getAllUsers();
 
-// $result = $pipedrive_client->getUserById(825469);
+// // $result = $pipedrive_client->getUserById(825469);
 
-// $result = $pipedrive_client->getUserActivities(825469, [
-// 	'due_date' => null,
-// 	'type' => null,
-// 	'start' => '0',
-// 	'limit' => '10',
-// 	'done' => null
+// $result = $pipedrive_client->createUser([
+// 	'name' => 'User Create_by_api',
+// 	'email' => 'alex@api.com',
+// 	'active_flag' => 1
 // 	]);
 
-// $result = $pipedrive_client->getUserFollowers(825469);
-
-// $result = $pipedrive_client->getUserUpdates(825469, [
-// 	'start' => '0',
-// 	'limit' => '10'
+// $result = $pipedrive_client->updateUser(831833, [
+// 	'active_flag' => 1
 // 	]);
 
-// $result = $pipedrive_client->getUserPermissionSetAssignments(825469, [
-// 	'start' => '0',
-// 	'limit' => '10'
+// // $result = $pipedrive_client->getUserActivities(825469, [
+// // 	'due_date' => null,
+// // 	'type' => null,
+// // 	'start' => '0',
+// // 	'limit' => '10',
+// // 	'done' => null
+// // 	]);
+
+// // $result = $pipedrive_client->getUserFollowers(825469);
+
+// // $result = $pipedrive_client->getUserUpdates(825469, [
+// // 	'start' => '0',
+// // 	'limit' => '10'
+// // 	]);
+
+// // $result = $pipedrive_client->getUserPermissionSetAssignments(825469, [
+// // 	'start' => '0',
+// // 	'limit' => '10'
+// // 	]);
+
+// $result = $pipedrive_client->assignPermissionSetToUser(831833, [
+// 	'permission_set_id' => '1'
 // 	]);
 
-// $result = $pipedrive_client->getUserRoleAssignments(825469, [
-// 	'start' => '0',
-// 	'limit' => '10'
+// $result = $pipedrive_client->removePermissionSetFromUser(825469,[
+// 	'permission_set_id' => '1'
 // 	]);
 
-// $result = $pipedrive_client->getUserRoleSettings(825469);
+// // $result = $pipedrive_client->getUserRoleAssignments(825469, [
+// // 	'start' => '0',
+// // 	'limit' => '10'
+// // 	]);
 
-// $result = $pipedrive_client->getUserPermissions(825469);
-
-// $result = $pipedrive_client->getUserPermittedItems(825469, [
-// 	'access_level' => null
+// $result = $pipedrive_client->assignRoleToUser(825469, [
+// 	'role_id' => '1'
 // 	]);
 
-// $result = $pipedrive_client->getUsersByName([
-// 	'term' => 'mohamed'
+// $result = $pipedrive_client->removeRoleFromUser(825469, [
+// 	'role_id' => '1'
 // 	]);
 
-//$result = $pipedrive_client->getUserBlacklistedEmails(825469);
+// // $result = $pipedrive_client->getUserRoleSettings(825469);
+
+// // $result = $pipedrive_client->getUserPermissions(825469);
+
+// // $result = $pipedrive_client->getUserPermittedItems(825469, [
+// // 	'access_level' => null
+// // 	]);
+
+// // $result = $pipedrive_client->getUsersByName([
+// // 	'term' => 'mohamed'
+// // 	]);
+
+// //$result = $pipedrive_client->getUserBlacklistedEmails(825469);
+
+$result = $pipedrive_client->addBlacklistedEmailsToUser(825469, [
+	'address' => 'foo@bar.com'
+	]);
 
 if(isset($result)){
 	var_dump($result);
