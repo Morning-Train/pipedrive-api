@@ -168,7 +168,7 @@ echo '<pre>';
 
 // $result = $pipedrive_client->getOrganizationById(1);
 
-// $result = $pipedrive_client->addOrganization([ 
+// $result = $pipedrive_client->createOrganization([ 
 // 	'name' => 'org created by the API',
 // 	'owner_id' => null,
 // 	'visible_to' => null,
@@ -246,18 +246,18 @@ echo '<pre>';
 // 	'limit' => '10'
 // 	]);
 
-// /* PERSONS */
+/* PERSONS */
 
-// // $result = $pipedrive_client->getPersons([ 
-// // 	'filter_id' => null,
-// // 	'start' => '0',
-// // 	'limit' => '10',
-// // 	'sort' => null
-// // 	]);
+// $result = $pipedrive_client->getPersons([ 
+// 	'filter_id' => null,
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'sort' => null
+// 	]);
 
-// // $result = $pipedrive_client->getPersonById(1);
+// $result = $pipedrive_client->getPersonById(1);
 
-// $result = $pipedrive_client->addPerson([ 
+// $result = $pipedrive_client->createPerson([ 
 // 	'name' => 'Mohamed Api',
 // 	'owner_id' => null,
 // 	'org_id' => null,
@@ -282,70 +282,70 @@ echo '<pre>';
 // 	'ids' => '1,2,3'
 // 	]);
 
-// // $result = $pipedrive_client->getPersonFiles(1, [ 
-// // 	'start' => '0',
-// // 	'limit' => '10',
-// // 	'include_deleted_files' => '1',
-// // 	'sort' => null
-// // 	]);
+// $result = $pipedrive_client->getPersonFiles(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'include_deleted_files' => '1',
+// 	'sort' => null
+// 	]);
 
-// // $result = $pipedrive_client->getPersonFiles(1, [ 
-// // 	'start' => '0',
-// // 	'limit' => '10'
-// // 	]);
+// $result = $pipedrive_client->getPersonFiles(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
 
-// // $result = $pipedrive_client->getPersonEmailMessages(1, [ 
-// // 	'start' => '0',
-// // 	'limit' => '10'
-// // 	]);
+// $result = $pipedrive_client->getPersonEmailMessages(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
 
 // $result = $pipedrive_client->followPerson(1, [ 
 // 	'user_id' => '04545'
 // 	]);
 
-// // $result = $pipedrive_client->getPersonFollowers(1);
+// $result = $pipedrive_client->getPersonFollowers(1);
 
 // $result = $pipedrive_client->unfollowPerson(1, 548798);
 
-// // $result = $pipedrive_client->getPersonProducts(1, [ 
-// // 	'start' => '0',
-// // 	'limit' => '10'
-// // 	]);
+// $result = $pipedrive_client->getPersonProducts(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
 
-// // $result = $pipedrive_client->getPersonDeals(1, [
-// // 	'start' => '0',
-// // 	'limit' => '10',
-// // 	'status' => null,
-// // 	'sort' => null
-// // 	]);
+// $result = $pipedrive_client->getPersonDeals(1, [
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'status' => null,
+// 	'sort' => null
+// 	]);
 
-// // $result = $pipedrive_client->getPersonUpdates(1, [ 
-// // 	'start' => '0',
-// // 	'limit' => '10'
-// // 	]);
+// $result = $pipedrive_client->getPersonUpdates(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
 
-// // $result = $pipedrive_client->getPersonActivities(1, [ 
-// // 	'start' => '0',
-// // 	'limit' => '10',
-// // 	'done' => null,
-// // 	'exclude' => null
-// // 	]);
+// $result = $pipedrive_client->getPersonActivities(1, [ 
+// 	'start' => '0',
+// 	'limit' => '10',
+// 	'done' => null,
+// 	'exclude' => null
+// 	]);
 
-// // $result = $pipedrive_client->getPersonPermittedUsers(1, [
-// // 	'access_level' => '3'
-// // 	]);
+// $result = $pipedrive_client->getPersonPermittedUsers(1, [
+// 	'access_level' => '3'
+// 	]);
 
 // $result = $pipedrive_client->mergePerson(1, [
 // 	'merge_with_id' => '3'
 // 	]);
 
-// // $result = $pipedrive_client->getPersonsByName([
-// // 	'term' => 'mohamed',
-// // 	'org_id' => null,
-// // 	'start' => '1',
-// // 	'limit' => '10',
-// // 	'search_by_email' => null
-// // 	]);
+// $result = $pipedrive_client->getPersonsByName([
+// 	'term' => 'mohamed',
+// 	'org_id' => null,
+// 	'start' => '1',
+// 	'limit' => '10',
+// 	'search_by_email' => null
+// 	]);
 
 // $result = $pipedrive_client->addPersonPicture(1, [
 // 	'file' => 'me.jpg',
@@ -355,7 +355,7 @@ echo '<pre>';
 // 	'crop_height' => null
 // 	]);
 
-$result = $pipedrive_client->deletePersonPicture(1);
+// $result = $pipedrive_client->deletePersonPicture(1);
 
 /* PIPELINES */
 

@@ -227,7 +227,7 @@ class PipedriveApi{
 		return $this->GET('organizations/'.$id);
 	}
 
-	public function addOrganization($args){
+	public function createOrganization($args){
 		return $this->POST('organizations', $args);
 	}
 
@@ -302,7 +302,7 @@ class PipedriveApi{
 		return $this->GET('persons/'.$id);
 	}
 
-	public function addPerson($args){
+	public function createPerson($args){
 		return $this->POST('persons/', $args);
 	}
 
