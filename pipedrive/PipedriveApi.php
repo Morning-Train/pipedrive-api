@@ -302,6 +302,22 @@ class PipedriveApi{
 		return $this->GET('persons/'.$id);
 	}
 
+	public function addPerson($args){
+		return $this->POST('persons/', $args);
+	}
+
+	public function updatePerson($id, $args){
+		return $this->PUT('persons/'.$id, $args);
+	}
+
+	public function deletePerson($id){
+		return $this->DELETE('persons/'.$id);
+	}
+
+	public function deleteMultiplePersons($args){
+		return $this->DELETE('persons', $args);
+	}
+
 	public function getPersonFiles($id, $query = []){
 		return $this->GET('persons/'.$id.'/files', $query);
 	}
@@ -310,8 +326,16 @@ class PipedriveApi{
 		return $this->GET('persons/'.$id.'/emailMessages', $query);
 	}
 
+	public function followPerson($id, $args){
+		return $this->POST('persons/'.$id.'/followers', $args);
+	}
+
 	public function getPersonFollowers($id){
 		return $this->GET('persons/'.$id.'/followers');
+	}
+
+	public function unfollowPerson($id, $followerId){
+		return $this->DELETE('persons/'.$id.'/followers/'.$followerId);
 	}
 
 	public function getPersonProducts($id, $query = []){
@@ -330,8 +354,20 @@ class PipedriveApi{
 		return $this->GET('persons/'.$id.'/permittedUsers', $query);
 	}
 
+	public function mergePerson($id, $args){
+		return $this->PUT('persons/'.$id.'/merge', $args);
+	}
+
 	public function getPersonsByName($query = []){
 		return $this->GET('persons/find', $query);
+	}
+
+	public function addPersonPicture($id, $args){
+		return $this->POST('persons/'.$id.'/picture', $args);
+	}
+
+	public function deletePersonPicture($id){
+		return $this->DELETE('persons/'.$id.'/picture');
 	}
 
 	/* PIPELINES */
