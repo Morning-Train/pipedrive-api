@@ -114,6 +114,32 @@ class PipedriveApi{
 		return false;
 	}
 
+	/* ACTIVITIES */
+
+	public function getActivities($query = []){
+		return $this->GET('activities', $query);
+	}
+
+	public function getActivityById($id){
+		return $this->GET('activities/'.$id);
+	}
+
+	public function createActivity($query = []){
+		return $this->POST('activities', $query);
+	}
+
+	public function updateActivity($id, $query = []){
+		return $this->PUT('activities/'.$id, $query);
+	}
+
+	public function deleteActivity($id){
+		return $this->DELETE('activities/'.$id);
+	}
+
+	public function deleteMultipleActivities($args){
+		return $this->DELETE('activities', $args);
+	}
+
 	/* DEALS */
 
 	public function getDeals($query = []){
@@ -568,9 +594,13 @@ class PipedriveApi{
 		return $this->POST('users/'.$id.'/blacklistedEmails', $args);
 	}
 
+	/* USER CONNECTIONS */
+
 	public function getAllUserConnections(){
 		return $this->GET('userConnections');
 	}
+
+	/* USER SETTINGS */
 
 	public function getUserSettings(){
 		return $this->GET('userSettings');
