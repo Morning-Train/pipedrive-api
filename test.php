@@ -59,6 +59,28 @@ echo '<pre>';
 // 	'ids' => '1,2,3'
 // 	]);
 
+/* ACTIVITY TYPES */
+
+// $result = $pipedrive_client->getActivityTypes();
+
+// $result = $pipedrive_client->createActivityType([
+// 	'name' => 'type_1',
+// 	'icon_key' => 'task',
+// 	'color' => 'red'
+// 	]);
+
+// $result = $pipedrive_client->updateActivityType(1, [
+// 	'name' => 'type_1',
+// 	'icon_key' => 'task',
+// 	'color' => 'red',
+// 	'order_nr' => 1
+// 	]);
+
+// $result = $pipedrive_client->deleteActivityType(1);
+
+// $result = $pipedrive_client->deleteMultipleActivityTypes([
+// 	'ids' => '1,2,3'
+// 	]);
 
 /* DEALS */
 

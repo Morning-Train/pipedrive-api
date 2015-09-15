@@ -140,6 +140,28 @@ class PipedriveApi{
 		return $this->DELETE('activities', $args);
 	}
 
+	/* ACTIVITY TYPES */
+
+	public function getActivityTypes($query = []){
+		return $this->GET('activityTypes', $query);
+	}
+
+	public function createActivityType($query = []){
+		return $this->POST('activityTypes', $query);
+	}
+
+	public function updateActivityType($id, $query = []){
+		return $this->PUT('activityTypes/'.$id, $query);
+	}
+
+	public function deleteActivityType($id){
+		return $this->DELETE('activityTypes/'.$id);
+	}
+
+	public function deleteMultipleActivityTypes($args){
+		return $this->DELETE('activityTypes', $args);
+	}
+
 	/* DEALS */
 
 	public function getDeals($query = []){
