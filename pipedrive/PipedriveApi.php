@@ -537,7 +537,6 @@ class PipedriveApi{
 		return $this->DELETE('organizations/'.$id.'/followers/'.$followerId);
 	}
 
-
 	public function getOrganizationPersons($id, $query = []){
 		return $this->GET('organizations/'.$id.'/persons', $query);
 	}
@@ -564,6 +563,54 @@ class PipedriveApi{
 
 	public function getOrganizationsByName($query = []){
 		return $this->GET('organizations/find', $query);
+	}
+
+	/* ORGANIZATION RELATIONSHIPS */
+
+	public function getOrganizationRelationships($query){
+		return $this->GET('organizationRelationships', $query);
+	}
+
+	public function getOrganizationRelationshipById($id, $query){
+		return $this->GET('organizationRelationships/'.$id, $query);
+	}
+
+	public function createOrganizationRelationship($args){
+		return $this->POST('organizationRelationships', $args);
+	}
+
+	public function updateOrganizationRelationship($id, $args){
+		return $this->PUT('organizationRelationships/'.$id, $args);
+	}
+
+	public function deleteOrganizationRelationship($id){
+		return $this->DELETE('organizationRelationships/'.$id);
+	}
+
+	/* PERMISSION SETS */
+
+	public function getAllPermissionSets(){
+		return $this->GET('permissionSets');
+	}
+
+	public function getPermissionSetById($id){
+		return $this->GET('permissionSets/'.$id);
+	}
+
+	public function updatePermissionSet($id, $args){
+		return $this->PUT('permissionSets/'.$id, $args);
+	}
+
+	public function getPermissionSetAssignments($id, $query){
+		return $this->GET('permissionSets/'.$id.'/assignments', $args);
+	}
+
+	public function addPermissionSetAssignment($id, $args){
+		return $this->POST('permissionSets/'.$id.'/assignments', $args);
+	}
+
+	public function deletePermissionSetAssignment($id, $args){
+		return $this->DELETE('permissionSets/'.$id.'/assignments', $args);
 	}
 
 	/* PERSONS */
@@ -642,6 +689,32 @@ class PipedriveApi{
 
 	public function deletePersonPicture($id){
 		return $this->DELETE('persons/'.$id.'/picture');
+	}
+
+	/* PERSON FIELDS */
+
+	public function getAllPersonFields(){
+		return $this->GET('personFields');
+	}
+
+	public function getPersonFieldById($id){
+		return $this->GET('personFields/'.$id);
+	}
+
+	public function addPersonField($args){
+		return $this->POST('personFields', $args);
+	}
+
+	public function updatePersonField($id, $args){
+		return $this->PUT('personFields/'.$id, $args);
+	}
+
+	public function deletePersonField($id){
+		return $this->DELETE('personFields/'.$id);
+	}
+
+	public function deleteMultiplePersonFields($args){
+		return $this->DELETE('personFields/', $args);
 	}
 
 	/* PIPELINES */

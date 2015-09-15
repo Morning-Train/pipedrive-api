@@ -611,6 +611,55 @@ echo '<pre>';
 // 	'limit' => '10'
 // 	]);
 
+/* ORGANIZATION RELATIONSHIPS */
+
+// $result = $pipedrive_client->getOrganizationRelationships([
+// 	'org_id' => '1'
+// 	]);
+
+// $result = $pipedrive_client->getOrganizationRelationshipById(1, [
+// 	'org_id' => '1'
+// 	]);
+
+// $result = $pipedrive_client->createOrganizationRelationship([
+// 	'org_id' => '1',
+// 	'type' => 'parent',
+// 	'rel_owner_org_id' => '2',
+// 	'rel_linked_org_id' => '3'
+// 	]);
+
+// $result = $pipedrive_client->updateOrganizationRelationship(1, [
+// 	'org_id' => '1',
+// 	'type' => 'parent',
+// 	'rel_owner_org_id' => '1',
+// 	'rel_linked_org_id' => '2'
+// 	]);
+
+// $result = $pipedrive_client->deleteOrganizationRelationship(1);
+
+/* PERMISSION SETS */
+
+// $result = $pipedrive_client->getAllPermissionSets();
+
+// $result = $pipedrive_client->getPermissionSetById(1);
+
+// $result = $pipedrive_client->updatePermissionSet(1, [
+// 	'comment' => 'bla bla bla'
+// 	]);
+
+// $result = $pipedrive_client->getPermissionSetAssignments(1, [
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->addPermissionSetAssignment(1, [
+// 	'user_id' => '1'
+// 	]);
+
+// $result = $pipedrive_client->deletePermissionSetAssignment(1, [
+// 	'user_id' => '1'
+// 	]);
+
 /* PERSONS */
 
 // $result = $pipedrive_client->getPersons([ 
@@ -721,6 +770,29 @@ echo '<pre>';
 // 	]);
 
 // $result = $pipedrive_client->deletePersonPicture(1);
+
+/* PERSON FIELDS */
+
+// $result = $pipedrive_client->getAllPersonFields();
+
+// $result = $pipedrive_client->getPersonFieldById(9028);
+
+// $result = $pipedrive_client->addPersonField([
+// 	'name' => 'age',
+// 	'field_type' => 'double',
+// 	'options' => null
+// 	]);
+
+// $result = $pipedrive_client->updatePersonField(9047, [
+// 	'name' => 'age',
+// 	'options' => null
+// 	]);
+
+// $result = $pipedrive_client->deletePersonField(9047);
+
+$result = $pipedrive_client->deleteMultiplePersonFields([
+	'ids' => '9047,9029,9030'
+	]);
 
 /* PIPELINES */
 
