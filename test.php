@@ -267,7 +267,7 @@ echo '<pre>';
 /* EMAIL MESSAAGES */
 
 // $result = $pipedrive_client->getEmailMessageById(1, [
-// 	'includeBody' => '1'
+// 	'include_body' => '1'
 // 	]);
 
 // $result = $pipedrive_client->updateEmailMessage(1, [
@@ -279,6 +279,165 @@ echo '<pre>';
 // $result = $pipedrive_client->deleteMultipleEmailMessages([
 // 	'ids' => '1,2,3'
 // 	]);
+
+/* EMAIL THREADS */
+
+// $result = $pipedrive_client->getEmailThreads([
+// 	'label' => '',
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+// $result = $pipedrive_client->getEmailThreadById(1);
+
+// $result = $pipedrive_client->updateEmailThread(1, [
+// 	'deal_id' => null,
+// 	'shared_flag' => 1,
+// 	'labels' => null,
+// 	'org_ids' => null
+// 	]);
+
+// $result = $pipedrive_client->deleteEmailThread(1);
+
+// $result = $pipedrive_client->deleteMultipleEmailThreads([
+// 	'ids' => '1,2,3'
+// 	]);
+
+// $result = $pipedrive_client->getEmailThreadMessages(1, [
+// 	'include_body' => '',
+// 	'start' => '0',
+// 	'limit' => '10'
+// 	]);
+
+/* FILES */
+
+// $result = $pipedrive_client->getFiles([
+// 	'start' => 0,
+// 	'limit' => 10,
+// 	'include_deleted_files' => null,
+// 	'sort' => null
+// 	]);
+
+// $result = $pipedrive_client->getFileById(1);
+
+// $result = $pipedrive_client->downloadFile(1);
+
+// $result = $pipedrive_client->addFiles([
+// 	'file' => 'pic.png',
+// 	'deal_id' => null,
+// 	'person_id' => null,
+// 	'org_id' => null,
+// 	'product_id' => null,
+// 	'activity_id' => null,
+// 	'note_id' => null
+// 	]);
+
+// $result = $pipedrive_client->createRemoteFile([
+// 	'file_type' => 'gdoc',
+// 	'title' => 'created by API',
+// 	'item_type' => 'deal',
+// 	'item_id' => 1,
+// 	'remote_location' => 'googledrive'
+// 	]);
+
+// $result = $pipedrive_client->linkRemoteFileToItem([
+// 	'item_type' => 'deal',
+// 	'item_id' => 1,
+// 	'remote_id' => 2,
+// 	'remote_location' => 'googledrive'
+// 	]);
+
+// $result = $pipedrive_client->updateFile(1, [
+// 	'id' => '1',
+// 	'name' => 'updated by Api',
+// 	'description' => 'bla bla bla',
+// 	]);
+
+// $result = $pipedrive_client->deleteFile(1);
+
+/* FILTERS */
+
+// $result = $pipedrive_client->getFilters([
+// 	'type' => null
+// 	]);
+
+// $result = $pipedrive_client->getFilterById(1);
+
+// $conditions = [
+// 	'condition' => [
+// 		'glue' => 'and',
+// 		'conditions' => [
+// 			[
+// 				'glue' => 'and',
+// 				'conditions' =>[
+// 					'object' => 'deal',
+//                     'field_id' => '12443',
+//                     'operator' => '=',
+//                     'value' => 'lost',
+//                     'extra_value' => null
+// 				]
+// 			],
+// 			[
+// 				'glue' => 'or',
+// 				'conditions' =>[]
+// 			]
+// 		]
+// 	]
+// ];
+
+// $result = $pipedrive_client->createFilter([
+// 	'name' => 'created by Id',
+// 	'conditions' => json_encode($conditions),
+// 	'type' => 'deals'
+// 	]);
+
+// $conditions = [
+// 	'condition' => [
+// 		'glue' => 'and',
+// 		'conditions' => [
+// 			[
+// 				'glue' => 'and',
+// 				'conditions' =>[
+// 					'object' => 'deal',
+//                     'field_id' => '12443',
+//                     'operator' => '=',
+//                     'value' => 'lost',
+//                     'extra_value' => null
+// 				]
+// 			],
+// 			[
+// 				'glue' => 'or',
+// 				'conditions' =>[]
+// 			]
+// 		]
+// 	]
+// ];
+
+// $result = $pipedrive_client->updateFilter(15, [
+// 	'name' => 'updated by Id',
+// 	'conditions' => json_encode($conditions),
+// 	'type' => 'deals'
+// 	]);
+
+// $result = $pipedrive_client->deleteFilter(15);
+
+// $result = $pipedrive_client->deleteMultipleFilters([
+// 	'ids' => '1,2,3'
+// 	]);
+
+/* GLOBAL MESSAGES */
+
+// $result = $pipedrive_client->getGlobalMessages([
+// 	'limit' => 10
+// 	]);
+
+// $result = $pipedrive_client->deleteGlobalMessage(1);
+
+/* GOALS */
+
+/* NOTES */
+
+/* ORGANIZATION FIELDS */
 
 /* ORGANIZATIONS */
 

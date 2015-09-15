@@ -321,6 +321,107 @@ class PipedriveApi{
 		return $this->DELETE('emailMessages', $args);
 	}
 
+	/* EMAIL THREADS */
+
+	public function getEmailThreads($args){
+		return $this->GET('emailThreads', $args);
+	}
+
+	public function getEmailThreadById($id){
+		return $this->GET('emailThreads/'.$id);
+	}
+
+	public function updateEmailThread($id, $args){
+		return $this->PUT('emailThreads/'.$id, $args);
+	}
+
+	public function deleteEmailThread($id){
+		return $this->DELETE('emailThreads/'.$id);
+	}
+
+	public function deleteMultipleEmailThreads($arg){
+		return $this->DELETE('emailThreads',$arg);
+	}
+
+	public function getEmailThreadMessages($id, $args){
+		return $this->GET('emailThreads/'.$id.'/messages', $args);
+	}
+
+	/* FILES */
+
+	public function getFiles($args){
+		return $this->GET('files', $args);
+	}
+
+	public function getFileById($id){
+		return $this->GET('files/'.$id);
+	}
+
+	public function downloadFile($id){
+		return $this->GET('files/'.$id.'/download');
+	}
+
+	public function addFiles($args){
+		return $this->POST('files', $args);
+	}
+
+	public function createRemoteFile($args){
+		return $this->POST('files/remote', $args);
+	}
+
+	public function linkRemoteFileToItem($args){
+		return $this->POST('files/remoteLink', $args);
+	}
+
+	public function updateFile($id, $args){
+		return $this->PUT('files/'.$id, $args);
+	}
+
+	public function deleteFile($id){
+		return $this->DELETE('files/'.$id);
+	}
+
+	/* FILTERS */
+
+	public function getFilters($args){
+		return $this->GET('filters', $args);
+	}
+
+	public function getFilterById($id){
+		return $this->GET('filters/'.$id);
+	}
+
+	public function createFilter($args){
+		return $this->POST('filters', $args);
+	}
+
+	public function updateFilter($id, $args){
+		return $this->PUT('filters/'.$id, $args);
+	}
+
+	public function deleteFilter($id){
+		return $this->DELETE('filters/'.$id);
+	}
+
+	public function deleteMultipleFilters($args){
+		return $this->DELETE('filters', $args);
+	}
+
+	/* GLOBAL MESSAGES */
+
+	public function getGlobalMessages($args){
+		return $this->GET('globalMessages', $args);
+	}
+
+	public function deleteGlobalMessage($id){
+		return $this->DELETE('globalMessages/'.$id);
+	}
+
+	/* GOALS */
+
+	/* NOTES */
+
+	/* ORGANIZATION FIELDS */
 
 	/* ORGANIZATIONS */
 
