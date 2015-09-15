@@ -435,9 +435,92 @@ echo '<pre>';
 
 /* GOALS */
 
+// $result = $pipedrive_client->getGoals([
+// 	'user_id' => null,
+// 	'everyone' => null
+// 	]);
+
+// $result = $pipedrive_client->getGoalById(1);
+
+// $result = $pipedrive_client->createGoal([
+// 	'goal_type' => 'stage',
+// 	'expected_type' => 'expected_num',
+// 	'user_id' => null,
+// 	'stage_id' => '1',
+// 	'period' => 'week',
+// 	'expected' => 1000,
+// 	'currency' => null,
+// 	'pipeline_id' => null
+// 	]);
+
+// $result = $pipedrive_client->updateGoal(1, [
+// 	'goal_type' => 'stage',
+// 	'expected_type' => 'expected_num',
+// 	'user_id' => null,
+// 	'stage_id' => 1,
+// 	'period' => 'week',
+// 	'expected' => 1000,
+// 	'currency' => null,
+// 	'pipeline_id' => null
+// 	]);
+
+// $result = $pipedrive_client->deleteGoal(1);
+
+// $result = $pipedrive_client->getGoalResults(1, [
+// 	'period_start' => null,
+// 	'period_end' => null
+// 	]);
+
 /* NOTES */
 
+// $result = $pipedrive_client->getAllNotes();
+
+// $result = $pipedrive_client->getNoteById(1);
+
+// $result = $pipedrive_client->createNote([
+// 	'content' => '',
+// 	'deal_id' => null,
+// 	'person_id' => null,
+// 	'org_id' => null,
+// 	'pinned_to_deal_flag' => null,
+// 	'pinned_to_organization_flag' => null,
+// 	'pinned_to_person_flag' => null
+// 	]);
+
+// $result = $pipedrive_client->updateNote(1, [
+// 	'content' => '',
+// 	'deal_id' => null,
+// 	'person_id' => null,
+// 	'org_id' => null,
+// 	'pinned_to_deal_flag' => null,
+// 	'pinned_to_organization_flag' => null,
+// 	'pinned_to_person_flag' => null
+// 	]);
+
+// $result = $pipedrive_client->deleteNote(1);
+
 /* ORGANIZATION FIELDS */
+
+// $result = $pipedrive_client->getAllOrganizationFields();
+
+// $result = $pipedrive_client->getOrganizationFieldById(3992);
+
+// $result = $pipedrive_client->createOrganizationField([
+// 	'name' => 'created by API',
+// 	'field_type' => 'varchar',
+// 	'option' => null
+// 	]);
+
+// $result = $pipedrive_client->updateOrganizationField(4011, [
+// 	'name' => 'updated by API',
+// 	'option' => null
+// 	]);
+
+// $result = $pipedrive_client->deleteOrganizationField(4011);
+
+// $result = $pipedrive_client->deleteMultipleOrganizationFields([
+// 	'ids' => '1,2,3'
+// 	]);
 
 /* ORGANIZATIONS */
 

@@ -419,9 +419,77 @@ class PipedriveApi{
 
 	/* GOALS */
 
+	public function getGoals($args){
+		return $this->GET('goals', $args);
+	}
+
+	public function getGoalById($id){
+		return $this->GET('goals/'.$id);
+	}
+
+	public function createGoal($args){
+		return $this->POST('goals', $args);
+	}
+
+	public function updateGoal($id, $args){
+		return $this->PUT('goals/'.$id, $args);
+	}
+
+	public function deleteGoal($id){
+		return $this->DELETE('goals/'.$id);
+	}
+
+	public function getGoalResults($id, $query){
+		return $this->GET('goals/'.$id.'/results', $query);
+	}
+
 	/* NOTES */
 
+	public function getAllNotes(){
+		return $this->GET('notes');
+	}
+
+	public function getNoteById($id){
+		return $this->GET('notes/'.$id);
+	}
+
+	public function createNote($args){
+		return $this->POST('notes', $args);
+	}
+
+	public function updateNote($id, $args){
+		return $this->PUT('notes/'.$id, $args);
+	}
+
+	public function deleteNote($id){
+		return $this->DELETE('notes/'.$id);
+	}
+
 	/* ORGANIZATION FIELDS */
+
+	public function getAllOrganizationFields(){
+		return $this->GET('organizationFields');
+	}
+
+	public function getOrganizationFieldById($id){
+		return $this->GET('organizationFields/'.$id);
+	}
+
+	public function createOrganizationField($args){
+		return $this->POST('organizationFields', $args);
+	}
+
+	public function updateOrganizationField($id, $args){
+		return $this->PUT('organizationFields/'.$id, $args);
+	}
+
+	public function deleteOrganizationField($id){
+		return $this->DELETE('organizationFields/'.$id);
+	}
+
+	public function deleteMultipleOrganizationFields($args){
+		return $this->DELETE('organizationFields', $args);
+	}
 
 	/* ORGANIZATIONS */
 
