@@ -82,6 +82,19 @@ echo '<pre>';
 // 	'ids' => '1,2,3'
 // 	]);
 
+/* AUTHORIZATIONS */
+
+// $result = $pipedrive_client->getAuthorizations([
+// 	'email' => 'foo@bar.com',
+// 	'password' => '123456'
+// 	]);
+
+/* CURRENCIES */
+
+// $result = $pipedrive_client->getCurrencies([
+// 	'term' => null
+// 	]);
+
 /* DEALS */
 
 // $result = $pipedrive_client->getDeals([ 
@@ -226,6 +239,45 @@ echo '<pre>';
 // 	'filter_id' => null,
 // 	'exclude_deals' => null,
 // 	'totals_convert_currency' => null
+// 	]);
+
+/* DEAL FIELDS */
+
+// $result = $pipedrive_client->getAllDealFields();
+
+// $result = $pipedrive_client->getDealFieldById(1);
+
+// $result = $pipedrive_client->createDealField([
+// 	'name' => 'created by API',
+// 	'field_type' => 'text',
+// 	'options' => null
+// 	]);
+
+// $result = $pipedrive_client->updateDealField(12466, [
+// 	'name' => 'updated by API',
+// 	'options' => null
+// 	]);
+
+// $result = $pipedrive_client->deleteDealField(12466);
+
+// $result = $pipedrive_client->deleteMultipleDealFields([
+// 	'ids' => '1,2,3'
+// 	]);
+
+/* EMAIL MESSAAGES */
+
+// $result = $pipedrive_client->getEmailMessageById(1, [
+// 	'includeBody' => '1'
+// 	]);
+
+// $result = $pipedrive_client->updateEmailMessage(1, [
+// 	'read_flag' => '1'
+// 	]);
+
+// $result = $pipedrive_client->deleteEmailMessage(1);
+
+// $result = $pipedrive_client->deleteMultipleEmailMessages([
+// 	'ids' => '1,2,3'
 // 	]);
 
 /* ORGANIZATIONS */

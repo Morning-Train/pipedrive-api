@@ -162,6 +162,18 @@ class PipedriveApi{
 		return $this->DELETE('activityTypes', $args);
 	}
 
+	/* AUTHORIZATIONS */
+
+	public function getAuthorizations($args){
+		return $this->POST('authorizations', $args);
+	}
+
+	/* CURRENCIES */
+
+	public function getCurrencies($query){
+		return $this->GET('currencies', $query);
+	}
+
 	/* DEALS */
 
 	public function getDeals($query = []){
@@ -264,6 +276,51 @@ class PipedriveApi{
 	public function getDealsTimeline($query = []){
 		return $this->GET('deals/timeline', $query);
 	}
+
+	/* DEAL FIELDS */
+
+	public function getAllDealFields(){
+		return $this->GET('dealFields');
+	}
+
+	public function getDealFieldById($id){
+		return $this->GET('dealFields/'.$id);
+	}
+
+	public function createDealField($args){
+		return $this->POST('dealFields', $args);
+	}
+
+	public function updateDealField($id, $args){
+		return $this->PUT('dealFields/'.$id, $args);
+	}
+
+	public function deleteDealField($id){
+		return $this->DELETE('dealFields/'.$id);
+	}
+
+	public function deleteMultipleDealFields($args){
+		return $this->DELETE('dealFields', $args);
+	}
+
+	/* EMAIL MESSAGES */
+
+	public function getEmailMessageById($id){
+		return $this->GET('emailMessages/'.$id);
+	}
+
+	public function updateEmailMessage($id){
+		return $this->PUT('emailMessages/'.$id);
+	}
+
+	public function deleteEmailMessage($id){
+		return $this->DELETE('emailMessages/'.$id);
+	}
+
+	public function deleteMultipleEmailMessages($args){
+		return $this->DELETE('emailMessages', $args);
+	}
+
 
 	/* ORGANIZATIONS */
 
