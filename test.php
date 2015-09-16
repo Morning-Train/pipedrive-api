@@ -790,9 +790,9 @@ echo '<pre>';
 
 // $result = $pipedrive_client->deletePersonField(9047);
 
-$result = $pipedrive_client->deleteMultiplePersonFields([
-	'ids' => '9047,9029,9030'
-	]);
+// $result = $pipedrive_client->deleteMultiplePersonFields([
+// 	'ids' => '9047,9029,9030'
+// 	]);
 
 /* PIPELINES */
 
@@ -893,6 +893,29 @@ $result = $pipedrive_client->deleteMultiplePersonFields([
 // 	'limit' => '10'
 // 	]);
 
+/* PRODUCT FIELDS */
+
+// $result = $pipedrive_client->getAllproductFields();
+
+// $result = $pipedrive_client->getProductFieldById(13);
+
+// $result = $pipedrive_client->addProductField([
+// 	'name' => 'Created by API',
+// 	'field_type' => 'text',
+// 	'options' => null
+// 	]);
+
+// $result = $pipedrive_client->updateProductField(22, [
+// 	'name' => 'Updated by API',
+// 	'options' => null
+// 	]);
+
+// $result = $pipedrive_client->deleteProductField(22);
+
+// $result = $pipedrive_client->deleteMultipleProductFields([
+// 	'ids' => '23,24,25'
+// 	]);
+
 /* PUSH NOTIFICATIONS */
 
 // $result = $pipedrive_client->getAllPushNotifications();
@@ -908,6 +931,81 @@ $result = $pipedrive_client->deleteMultiplePersonFields([
 // 	]);
 
 // $result = $pipedrive_client->deletePushNotification(1);
+
+/* RECENT */
+
+// $result = $pipedrive_client->getRecents([
+// 	'since_timestamp' => '2015-08-01 00:00:00',
+// 	'items' => 'deal',
+// 	'start' => 0,
+// 	'limit' => 10
+// 	]);
+
+/* ROLES */
+
+// $result = $pipedrive_client->getAllRoles([
+// 	'start' => 0,
+// 	'limit' => 10
+// 	]);
+
+// $result = $pipedrive_client->getRoleById(1);
+
+// $result = $pipedrive_client->createRole([
+// 	'parent_role_id' => null,
+// 	'name' => 'role created by API'
+// 	]);
+
+// $result = $pipedrive_client->updateRole(1, [
+// 	'parent_role_id' => null,
+// 	'name' => 'role updated by API'
+// 	]);
+
+// $result = $pipedrive_client->deleteRole(1);
+
+// $result = $pipedrive_client->getSubRoles(1, [
+// 	'start' => 0,
+// 	'limit' => 10
+// 	]);
+
+// $result = $pipedrive_client->getRoleAssignments(1, [
+// 	'start' => 0,
+// 	'limit' => 10
+// 	]);
+
+// $result = $pipedrive_client->assignRole(1, [
+// 	'user_id' => 1,
+// 	]);
+
+// $result = $pipedrive_client->unassignRole(1, [
+// 	'user_id' => 1,
+// 	]);
+
+// $result = $pipedrive_client->getRoleSettings(1);
+
+// $result = $pipedrive_client->addRoleSetting(1, [
+// 	'setting_key' => 'org_access_level',
+// 	'value' => 0
+// 	]);
+
+/* SEARCH RESULTS */
+
+// $result = $pipedrive_client->search([
+// 	'term' => 'deal',
+// 	'term_type' => null,
+// 	'start' => 0,
+// 	'limit' => 10
+// 	]);
+
+// $result = $pipedrive_client->searchField([
+// 	'term' => 'name',
+// 	'exact_match' => null,
+// 	'field_type' => 'dealField',
+// 	'field_key' => 548787,
+// 	'return_field_key' => null,
+// 	'return_item_ids' => null,
+// 	'start' => 0,
+// 	'limit' => 10
+// 	]);
 
 /* STAGES */
 

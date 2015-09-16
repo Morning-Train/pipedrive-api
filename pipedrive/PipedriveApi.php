@@ -789,7 +789,33 @@ class PipedriveApi{
 		return $this->GET('products/find', $query);
 	}
 
-	/*PUSH NOTIFICATIONS*/
+	/* PRODUCT FIELDS */
+
+	public function getAllProductFields(){
+		return $this->GET('productFields');
+	}
+
+	public function getProductFieldById($id){
+		return $this->GET('productFields/'.$id);
+	}
+
+	public function addProductField($args){
+		return $this->POST('productFields', $args);
+	}
+
+	public function updateProductField($id, $args){
+		return $this->PUT('productFields/'.$id, $args);
+	}
+
+	public function deleteProductField($id){
+		return $this->DELETE('productFields/'.$id);
+	}
+
+	public function deleteMultipleProductFields($args){
+		return $this->DELETE('productFields', $args);
+	}
+
+	/* PUSH NOTIFICATIONS */
 
 	public function getAllPushNotifications(){
 		return $this->GET('pushNotifications');
@@ -805,6 +831,68 @@ class PipedriveApi{
 
 	public function deletePushNotification($id){
 		return $this->DELETE('pushNotifications/'.$id);
+	}
+
+	/* RECENTS */
+
+	public function getRecents($query){
+		return $this->GET('recents', $query);
+	}
+
+	/* ROLES */
+
+	public function getAllRoles($query){
+		return $this->GET('roles', $query);
+	}
+
+	public function getRoleById($id){
+		return $this->GET('roles/'.$id);
+	}
+
+	public function createRole($args){
+		return $this->POST('roles', $args);
+	}
+
+	public function updateRole($id, $args){
+		return $this->PUT('roles/'.$id, $args);
+	}
+
+	public function deleteRole($id){
+		return $this->DELETE('roles/'.$id);
+	}
+
+	public function getSubRoles($id, $query){
+		return $this->GET('roles/'.$id.'/roles', $query);
+	}
+
+	public function getRoleAssignments($id, $query){
+		return $this->GET('roles/'.$id.'/assignments', $query);
+	}
+
+	public function assignRole($id, $args){
+		return $this->POST('roles/'.$id.'/assignments', $args);
+	}
+
+	public function unassignRole($id, $args){
+		return $this->DELETE('roles/'.$id.'/assignments', $args);
+	}
+
+	public function getRoleSettings($id){
+		return $this->GET('roles/'.$id.'/settings');
+	}
+
+	public function addRoleSetting($id, $args){
+		return $this->POST('roles/'.$id.'/settings', $args);
+	}
+
+	/* SEARCH RESULTS */
+
+	public function search($query){
+		return $this->GET('searchResults', $query);
+	}
+
+	public function searchField($query){
+		return $this->GET('searchResults/field', $query);
 	}
 
 	/* STAGES */
