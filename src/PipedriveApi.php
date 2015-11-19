@@ -1,4 +1,5 @@
 <?php
+namespace MorningTrain\PipedriveApi;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;

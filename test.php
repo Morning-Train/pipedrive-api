@@ -2,9 +2,9 @@
 
 require 'vendor/autoload.php';
 
-require 'pipedrive/PipedriveApi.php';
+use MorningTrain\PipedriveApi\PipedriveApi;
 
-define('PIPEDRIVE_API_KEY', '068f7f3e64b280a092216fc6e88d7afaada21f38');
+define('PIPEDRIVE_API_KEY', 'YOUR-PIPEDRIVE-API-KEY');
 
 $pipedrive_client = new PipedriveApi(PIPEDRIVE_API_KEY);
 
